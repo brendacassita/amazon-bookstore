@@ -6,6 +6,7 @@ class Api::AuthorsController < ApplicationController
   end
 
   def show
+    # author = Author.find(params[:id])
      render json: @author
   end
 
@@ -31,7 +32,6 @@ class Api::AuthorsController < ApplicationController
   end
 
 
-
   # methods only visible to class
   private
 
@@ -40,7 +40,7 @@ class Api::AuthorsController < ApplicationController
   end
 
   def set_author
-    puts 'set_author called!!!!!!!!'
+    puts 'set_author called!'
     @author = Author.find(params[:id])
   end
 end
